@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Alice Risholt Portfolio</title>
+  <link href="main.css" rel="stylesheet" type="text/css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <script type="text/javascript"
+  src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+
+  <div id="grid">
+<!--****************************** INDEX   S1 ******************************-->
+    <section id="section1">
+      <div id="header">
+        <div><a class ="aHeader" href="#section2">About Me</a></div>
+        <div><a class ="aHeader" href="#section3">Portfolio</a></div>
+        <div><a class ="aHeader" href="#section4">Contact</a></div>
+      </div>
+      <div id="textArea">
+        <h1>Hi there,<br> I'm <font color="D7263D"><u>Alice</u></font></h1>
+      </div>
+      <div id="arrow"><a href="#section2">
+        <img src="arrow.png" class="arrow">
+      </a></div>
+    </section>
+
+<!--****************************** ABOUT   S2 ******************************-->
+    <section id="section2">
+      <div id="textArea">
+        <img src="alice.png" class="profilePicture">
+        <h2>Who is Alice?</h2>
+        <p>I am currently studying my third year out of five on the Interaction
+          Design program at Umeå University. <br><br>
+          When at uni my focus point is UX
+          and UI-design, web development and interaction design. In my spare
+          time I like to lose myself in youtube-tutorials on Game Development
+          and my own ongoing projects on the same subject.<br><br>
+          Want to know more? Head to my
+          <a href="https://linkedin.com/in/alicerisholt/">LinkedIn</a>!
+          </p>
+      </div>
+
+      <div id="arrow"><a href="#section3">
+          <img src="arrowWhite.png" class="arrow"></a></div>
+    </section>
+
+
+<!--***************************** PORTFOLIO S3 *****************************-->
+
+    <section id="section3">
+
+      <div class="portfolioContainer">
+        <img id="portfolioImg" src="MMbred.jpg">
+        <p class="portfolioElementHeader">Consultant-Assignment matching system</p>
+      </div>
+
+
+<!--A team of six split into two groups - front end (graphic and interaction-design) and back end (systems functions, algorithms). I together with Ida and Evelina created an algorithm that can match any job adverse to the best suited consultants at sigma using availability, location, willingness to move, skills, prior work to create the perfect match. The system can also tell Sigma analytics such as what skills their consultants are lacking, what skills are wanted in certain cities, what skill a consultant would need to be better suited for an assignment or find a team of people who compliment each other.-->
+      <div class="portfolioContainer">
+        <img id="portfolioImg" src="toDoBred.jpg">
+        <p class="portfolioElementHeader">Augmented Reality app with Unity and Vuforia</p>
+      </div>
+
+    <div class="portfolioContainer">
+      <img id="portfolioImg" src="VKbred.jpg">
+      <p class="portfolioElementHeader">Podcast app UI for local newspaper</p>
+    </div>
+
+    <div class="portfolioContainer">
+      <img id="portfolioImg" src="3Dbred.jpg">
+      <p class="portfolioElementHeader">Gallery: 3D Art and Animations</p>
+    </div>
+
+      <div id="arrow"><a href="#section4"><img src="arrow.png" class="arrow"></a></div>
+    </section>
+
+
+<!--***************************** CONTACT S4 ******************************-->
+
+    <section id="section4">
+      <div id="textArea2">
+        <h2>Let's talk!</h2>
+        <p>Feel free to email me at <a href="mailto:alicerisholt@gmail.com">
+          alicerisholt@gmail.com</a> about anything!</p>
+      </div>
+      <div id="arrow"><a href="#section1"><img src="arrowWhite.png" class="arrowUp"></a></div>
+    </section>
+
+
+
+  <!--***************************** SCRIPTS *******************************-->
+
+  <script>
+  $(function () {
+    $('a[href*="#"]:not([href="#"])').click(function () {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+  </script>
+</body>
+</html>
